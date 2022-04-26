@@ -148,7 +148,7 @@ class Student:
                 user= 'root',
                 port=3306,
                 database= 'student',
-                password= 'puran',
+                password= 'password',
             )
             cur = conn.cursor()
             self.ROLL_NUMBERS.append(self.roll_no.get())
@@ -178,7 +178,7 @@ class Student:
             user= 'root',
             port=3306,
             database= 'student',
-            password= 'puran',
+            password= 'password',
         )
         cur = conn.cursor()
         cur.execute("UPDATE studentdata SET Roll_no=%s,Name=%s,Father=%s,Email=%s,Phone=%s,DOB=%s,Gender=%s,Address=%s WHERE Roll_No=%s",(
@@ -203,7 +203,7 @@ class Student:
             user="root",
             port=3306,
             database="student",
-            password="puran",
+            password="password",
         )
         cur=conn.cursor()
         cur.execute("DELETE FROM studentdata WHERE roll_no = '"+str(self.roll_no.get())+"'")
@@ -228,7 +228,7 @@ class Student:
             user= 'root',
             port=3306,
             database= 'student',
-            password= 'puran',
+            password= 'password',
         )
         cur = conn.cursor()
         cur.execute("SELECT * FROM studentdata WHERE "+str(self.search_by.get())+" like '%"+str(self.search_var.get())+"%'")
@@ -247,7 +247,7 @@ class Student:
             port=3306,
             user="root",
             database="student",
-            password="puran"
+            password="password"
         )
         cur = conn.cursor()
         cur.execute("SELECT * FROM studentdata")
